@@ -3,7 +3,8 @@ import { Button } from "@/components/ui/button";
 export default function Home() {
   return (
     
-     <div>Hello Sachin
+     <div className="grid-background">
+      
 
       <br></br>
       <Button>Submit</Button>
