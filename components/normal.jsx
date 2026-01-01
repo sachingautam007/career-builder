@@ -13,7 +13,7 @@ const NormalSection = () => {
         </h1>
         <p>
             This is a student mentor website where you can 
-            get guidance and also you can prepare for company.
+            get guidance and also you can prepare for Interviews.
         </p>
       </div>
       <div>
