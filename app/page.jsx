@@ -6,8 +6,7 @@ export default function Home() {
      <div className="grid-background">
       
 
-      <br></br>
-      <Button>Submit</Button>
+      <normalSection/>
      </div>
   );
 }
