@@ -1,12 +1,10 @@
-import Image from "next/image";
+import NormalSection from "@/components/normal";
 import { Button } from "@/components/ui/button";
 export default function Home() {
   return (
-    
-     <div className="grid-background">
-      
-
-      <normalSection/>
+    <div>
+     <div className="grid-background"></div>
+      <NormalSection/>
      </div>
   );
 }
