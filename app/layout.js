@@ -1,4 +1,4 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Kumar_One_Outline } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider"
 import Header from "@/components/header";
@@ -22,6 +22,7 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
+
 
 export const metadata = {
   title: "NextStep career mentor",
@@ -59,7 +60,7 @@ export default function RootLayout({ children }) {
               <div className="flex items-center space-x-2 md:space-x-3"> 
                 {/* <Signin> */}
               <ModeToggle />
-                <Link href={'industry-trend'}>
+                <Link href={"/industry-insights"}>
                 <Button>
                   <LayoutDashboard className="h-4 w-4"/>
                   <span className="hidden md:block">Industry Insights</span>
