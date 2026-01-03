@@ -5,7 +5,7 @@ export default function Home() {
     <div>
      <div className="grid-background"></div>
       <NormalSection/>
-      <Button>Hello</Button>
+      
      </div>
   );
 }
