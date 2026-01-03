@@ -1,7 +1,6 @@
-import { TypeOutline } from "lucide-react";
 import { Button } from "./ui/button";
 import Link from "next/link";
-const NormalSection = () => {
+const HeroSection = () => {
   return (
      <section className="w-full pt-36 md:pt-48 pb-10">
     <div>
@@ -33,4 +32,4 @@ const NormalSection = () => {
   );
 };
 
-export default NormalSection;
+export default HeroSection;
