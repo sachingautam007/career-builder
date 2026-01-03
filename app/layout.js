@@ -112,7 +112,7 @@ export default function RootLayout({ children }) {
             
             <main className="min-h-screen">{children}</main>
             {/* footer show capyright */}
-            <footer className="bg-muted/48 py-10">
+            <footer className="bg-muted/48 py-10 ">
             <div className="container mx-auto px-4 text-center text-gray-400">
               <p>Made by team NextStep.ai</p>
             </div>
