@@ -1,4 +1,4 @@
-import { Geist, Geist_Mono, Kumar_One_Outline } from "next/font/google";
+import { Geist, Geist_Mono } from "next/font/google"
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider"
 import Header from "@/components/header";
@@ -16,11 +16,13 @@ import { DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
+  bold: ["400", "600", "700"],
 });
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+  bold: ["400", "600", "700"],
 });
 
 

@@ -102,3 +102,25 @@
   inset: 0;
   background: radial-gradient(circle, transparent, rgba(0, 0, 0, 0.9));
 }
+
+@layer utilities {
+  .gradient{
+    @apply bg-gradient-to-b from-teal-400 via-teal-200 to-teal-600;
+  }
+  .gradient-title {
+    @apply font-extrabold tracking-tighter text-transparent bg-clip-text pb-2 pr-2;
+    background-image: linear-gradient(90deg, #42f0f0, #63ccdc, #4787ee);
+  }
+  .gradient-ti{
+    @apply font-extrabold tracking-tighter text-transparent bg-clip-text pb-2 pr-2;
+    background-image: linear-gradient(90deg, #42f0f0, #41c6da, #3b82f6);
+  }
+  .gradient-sp{
+    @apply text-transparent bg-clip-text;
+    background-image: linear-gradient(90deg, #b4cbfc, #7bf0e7, #19c5f0);
+  }
+  .gradient-sac{
+    @apply text-transparent bg-clip-text;
+    background-image: linear-gradient(90deg, #a7d7df, #a9bad4, #3b82f6);
+  }
+}
