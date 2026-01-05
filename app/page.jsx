@@ -5,6 +5,8 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Working } from "@/WebData/Working";
 import { faqs } from "@/WebData/faqs";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { ArrowBigRight } from "lucide-react";
+import Link from "next/link";
 export default function Home() {
   return (
     <div>
@@ -101,6 +103,26 @@ export default function Home() {
     </Accordion>
           
          </div>
+        </div>
+      </section>
+
+  <section className="w-full">
+        <div className="mx-auto py-24 gradient rounded-lg">
+          <div className="text-center max-w-3xl mx-auto mb-12">
+         <h2 className="text-3xl font-bold tracking-tighter text-center mb-10 gradient-sp">Let accelerate your career</h2>
+         <p className="text-neutral-100">Join thousands of students 
+          who are growing their career with career-mentor guidance</p>
+          <Link href="/industry-insights" passHref>
+          <Button
+          size="lg"
+          variant="secondary"
+          className="h-11 mt-5 animate-bounce 
+          bg-background hover:bg-purple-600 text-cyan-700 hover:text-white transition-colors duration-300"
+          >
+            Start Now <ArrowBigRight className="ml-2 h-4 w-4"/>
+          </Button>
+          </Link> 
+           </div>
         </div>
       </section>
 
