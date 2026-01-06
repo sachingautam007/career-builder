@@ -16,13 +16,11 @@ import { DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
-  bold: ["400", "600", "700"],
 });
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
-  bold: ["400", "600", "700"],
 });
 
 
