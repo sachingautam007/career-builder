@@ -8,11 +8,11 @@ const Login = () => {
     <div
       className="h-full w-full flex flex-col items-center justify-center
      min-h-screen px-6 sm:px-0 text-white 
-     bg-gradient-to-br"
+      bg-amber-1000 relative"
     >
       <img
-        src={assets.logo}
-        alt=""
+        src={logo.png}
+        alt="logo.png"
         className="absolute left-5 sm:left-20 top-5 w-28 sm:w-32 cursor-pointer"
       />
 
@@ -91,7 +91,7 @@ const Login = () => {
         ) : (
           <p className="text-gray-400 text-center text-xs mt-4">
             {" "}
-            Dno't have an account{" "}
+            Don't have an account{" "}
             <span onClick={() => setState("Sign Up")} className="text-blue-400 cursor-pointer underline">
               Sign Up
             </span>

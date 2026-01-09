@@ -12,7 +12,7 @@ const HeroSection = () => {
         <br />
         To Build There Career
       </h1>
-      <p className="mx-auto max-w-[600px] text-muted-foreground md:text-xl">
+      <p className="mx-auto max-w-600px text-muted-foreground md:text-xl">
         This is a student mentor website where you can 
         get guidance and also you can prepare for Interviews.
       </p>

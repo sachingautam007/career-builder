@@ -31,7 +31,7 @@ export function CarouselAutoplay() {
   ]
 
   if (!Swiper || !SwiperSlide || !modules) {
-    return <div className="w-full max-w-4xl aspect-[4/3] bg-gray-200 rounded-lg animate-pulse" />
+    return <div className="w-full max-w-4xl aspect-4/3 bg-gray-200 rounded-lg animate-pulse" />
   }
 
   return (
@@ -54,7 +54,7 @@ export function CarouselAutoplay() {
         >
           {images.map((src, i) => (
             <SwiperSlide key={i}>
-              <div className="relative aspect-[4/3] overflow-hidden rounded-lg">
+              <div className="relative aspect-4/3 overflow-hidden rounded-lg">
                 <Image
                   src={src}
                   alt={`Slide ${i + 1}`}
