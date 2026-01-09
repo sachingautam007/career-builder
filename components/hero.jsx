@@ -29,7 +29,7 @@ const HeroSection = () => {
     <div>
       <CarouselAutoplay
         width={1280}
-        height={720}
+        height={960}
         className="rounded-lg shadow-2xl border mx-auto"
         priority
       />

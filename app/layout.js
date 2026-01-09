@@ -59,6 +59,7 @@ export default function RootLayout({ children }) {
     
               <div className="flex items-center space-x-2 md:space-x-3"> 
                 {/* <Signin> */}
+              
               <ModeToggle />
                 <Link href={"/industry-insights"}>
                 <Button>
@@ -67,7 +68,7 @@ export default function RootLayout({ children }) {
                 </Button>
                 </Link>
 
-                {/* </Signin> */}
+                
                 <DropdownMenu>
   <DropdownMenuTrigger asChild>
     <Button className={"flex items-centre gap-2"}>

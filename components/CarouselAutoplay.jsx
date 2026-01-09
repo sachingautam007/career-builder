@@ -25,9 +25,9 @@ export function CarouselAutoplay() {
   }, [])
 
   const images = [
-    "/Image1.png",
-    "/Image2.png",
-    "/Image3.png",
+    "/Image1.jpeg",
+    "/Image2.jpeg",
+    "/Image3.jpeg",
   ]
 
   if (!Swiper || !SwiperSlide || !modules) {
