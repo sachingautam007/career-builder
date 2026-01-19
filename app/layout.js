@@ -61,6 +61,11 @@ export default function RootLayout({ children }) {
                 {/* <Signin> */}
               
               <ModeToggle />
+              <Link href={"/login"} >
+                <Button variant="outline" className=" hover:bg-purple-600">
+                  Login
+                </Button>
+              </Link>
                 <Link href={"/industry-insights"}>
                 <Button>
                   <LayoutDashboard className="h-4 w-4"/>

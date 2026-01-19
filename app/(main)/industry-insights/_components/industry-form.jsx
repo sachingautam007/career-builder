@@ -3,7 +3,7 @@
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { IndustryInsightsSchema } from "@/lib2/schema";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Select, SelectContent, SelectTrigger, SelectValue, SelectItem } from "@/components/ui/select";
@@ -11,16 +11,45 @@ import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
+import { toast } from "sonner";
 
 const IndustryInsightsform = ({ industries }) => {
 
   const [selectedIndustry, setSelectedIndustry] = useState(null);
-  const router = useRouter();
+  // const router = useRouter();
+  // const {
+  //   loading :updateLoading,
+  //   fn: updateProfile,
+  //   data: updateData,
+  // } = useFetch(updateUser);
+
   const { register, handleSubmit, formState: { errors }, setValue, watch, } = useForm({
 
     resolver: zodResolver(IndustryInsightsSchema),
   });
-  const onsubmit = async (value) => {};
+  const onsubmit = async (value) => {
+    // try{
+    //   const formattedIndustry = `${value.industry} - ${value.subIndustry.toLowerCase().replace(/\s+/g, "-")}`;
+    //   await updateProfile({
+    //     ...value,
+    //     industry: formattedIndustry,
+    //     experience: value.experience,
+    //     skills: value.skills,
+    //     bio: value.bio,
+    //   });
+    // }
+    // catch(error){
+    //   console.error("Error updating profile:", error);
+  };
+
+  // useEffect(() => {
+  //   if(updateResult?.success && !updateLoading){
+  //    toast.success("Profile updated successfully");
+  //    router.push("/dashboard");
+  //    router.refresh();
+  //   }
+  // }, [updateResult, updateLoading]);
+
 // const watchedIndustry = watch("industry");
   return <div className="flex items-center justify-center bg-background">
     <Card className="w-full max-w-lg mt-10 mx-20 p-6 shadow-lg">
@@ -115,6 +144,7 @@ const IndustryInsightsform = ({ industries }) => {
           </div>
 
            <Button type="submit" className="w-full">
+            {/* {updateLoading && <Loader2 className="animate-spin mr-2 h-4 w-4"/>} */}
             Complete Registration
            </Button>
         </form>
@@ -122,4 +152,5 @@ const IndustryInsightsform = ({ industries }) => {
     </Card>
   </div>;
 };
+
 export default IndustryInsightsform;
