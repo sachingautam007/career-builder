@@ -5,6 +5,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { IndustryInsightsSchema } from "@/lib2/schema";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Select, SelectContent, SelectTrigger, SelectValue, SelectItem } from "@/components/ui/select";
 import { Label } from "@/components/ui/label";
@@ -142,11 +143,13 @@ const IndustryInsightsform = ({ industries }) => {
 
             {errors.bio && <p className="text-red-500 text-sm">{errors.bio.message}</p>}
           </div>
-
+                
+              <Link href={"/login"} >
            <Button type="submit" className="w-full">
             {/* {updateLoading && <Loader2 className="animate-spin mr-2 h-4 w-4"/>} */}
             Complete Registration
            </Button>
+           </Link>  
         </form>
       </CardContent>
     </Card>

@@ -2,7 +2,7 @@ export const faqs = [
   {
     question: "What makes NextStep.ai unique as a career development tool?",
     answer:
-      "NextStep.ai combines AI-powered career tools with industry-specific insights to help you grow your career. Our platform offers three main features: an intelligent ATS resume tester, a cover letter generator, and an adaptive interview preparation system. Each tool is tailored to your industry and skills, providing personalized guidance for your professional journey.",
+      "NextStep.ai combines AI-powered career tools with industry-specific insights to help you grow your career. Our platform offers four main features: an intelligent ATS resume tester, Ai-powered career guidance to get industry-insights, a cover letter generator, and an adaptive interview preparation system. Each tool is tailored to your industry and skills, providing personalized guidance for your professional journey.",
   },
   {
     question: "How does NextStep.ai create tailored content?",

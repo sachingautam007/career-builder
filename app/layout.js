@@ -62,7 +62,7 @@ export default function RootLayout({ children }) {
               
               <ModeToggle />
               <Link href={"/login"} >
-                <Button variant="outline" className=" hover:bg-purple-600">
+                <Button className=" bg-background hover:bg-purple-600 text-cyan-200 hover:text-white transition-colors duration-300">
                   Login
                 </Button>
               </Link>

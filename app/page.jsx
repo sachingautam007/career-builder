@@ -9,6 +9,7 @@ import { ArrowBigRight } from "lucide-react";
 import Link from "next/link";
 export default function Home() {
   return (
+    
     <div>
       <div className="grid-background"></div>
       <HeroSection />
@@ -62,7 +63,7 @@ export default function Home() {
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
             <div className="flex flex-col items-center justify-center space-y-4">
-              <h3 className="text-4xl font-bold">70+</h3>
+              <h3 className="text-4xl font-bold">30+</h3>
               <p className="text-muted-foreground">Industries Covered</p>
             </div>
             <div className="flex flex-col items-center justify-center space-y-4">
