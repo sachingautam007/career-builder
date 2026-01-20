@@ -10,7 +10,7 @@ const HeroSection = () => {
       <h1 className="text-4xl font-bold md:text-5xl lg:text-6xl xl:text-7xl gradient-title">
         Helping Students
         <br />
-        To Build There Career
+        To Build Their Career
       </h1>
       <p className="mx-auto max-w-600px text-muted-foreground md:text-xl">
         This is a student mentor website where you can 
