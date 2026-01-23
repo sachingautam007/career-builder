@@ -16,6 +16,7 @@ import { useSession, signOut } from "next-auth/react";
 import AuthHeader from "@/components/AuthHeader";
 
 
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -34,6 +35,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
+
 
 
     <html lang="en" suppressHydrationWarning>
@@ -64,21 +66,9 @@ export default function RootLayout({ children }) {
 
                 <div className="flex items-center space-x-2 md:space-x-3">
 
-
                   <ModeToggle />
-                  {/* {status === "authenticated" ? (
-                    <Button
-                      onClick={() => signOut({ callbackUrl: "/login" })}
-                      variant="destructive"
-                    >
-                      Logout
-                    </Button>
-                  ) : ( */}
+
                   <AuthHeader />
-                    {/* <Link href="/login">
-                      <Button className=" bg-background hover:bg-purple-600 text-cyan-200 hover:text-white transition-colors duration-300">Login</Button>
-                    </Link> */}
-                  {/* // )} */}
 
                   <Link href={"/industry-insights"}>
                     <Button>
@@ -142,6 +132,7 @@ export default function RootLayout({ children }) {
         </Providers>
       </body>
     </html>
+
 
   );
 } 

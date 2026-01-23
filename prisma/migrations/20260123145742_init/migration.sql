@@ -1,0 +1,105 @@
+-- CreateEnum
+CREATE TYPE "DemandLevel" AS ENUM ('HIGH', 'MEDIUM', 'LOW');
+
+-- CreateEnum
+CREATE TYPE "MarketOutlook" AS ENUM ('POSITIVE', 'STABLE', 'NEGATIVE');
+
+-- CreateTable
+CREATE TABLE "User" (
+    "id" UUID NOT NULL,
+    "name" TEXT NOT NULL,
+    "email" TEXT NOT NULL,
+    "industryId" UUID,
+    "bio" TEXT,
+    "experience" INTEGER,
+    "skills" TEXT[],
+    "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    "updatedAt" TIMESTAMP(3) NOT NULL,
+
+    CONSTRAINT "User_pkey" PRIMARY KEY ("id")
+);
+
+-- CreateTable
+CREATE TABLE "Assessment" (
+    "id" UUID NOT NULL,
+    "userId" UUID NOT NULL,
+    "score" DOUBLE PRECISION NOT NULL,
+    "questions" JSONB NOT NULL,
+    "category" TEXT NOT NULL,
+    "improvementTip" TEXT,
+    "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    "updatedAt" TIMESTAMP(3) NOT NULL,
+
+    CONSTRAINT "Assessment_pkey" PRIMARY KEY ("id")
+);
+
+-- CreateTable
+CREATE TABLE "Resume" (
+    "id" UUID NOT NULL,
+    "userId" UUID NOT NULL,
+    "content" TEXT NOT NULL,
+    "atsScore" DOUBLE PRECISION,
+    "suggestions" JSONB NOT NULL,
+    "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    "updatedAt" TIMESTAMP(3) NOT NULL,
+
+    CONSTRAINT "Resume_pkey" PRIMARY KEY ("id")
+);
+
+-- CreateTable
+CREATE TABLE "CoverLetter" (
+    "id" UUID NOT NULL,
+    "userId" UUID NOT NULL,
+    "content" TEXT NOT NULL,
+    "jobDescription" TEXT,
+    "companyName" TEXT NOT NULL,
+    "jobTitle" TEXT NOT NULL,
+    "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    "updatedAt" TIMESTAMP(3) NOT NULL,
+
+    CONSTRAINT "CoverLetter_pkey" PRIMARY KEY ("id")
+);
+
+-- CreateTable
+CREATE TABLE "IndustryInsights" (
+    "id" UUID NOT NULL,
+    "industry" TEXT NOT NULL,
+    "salaryRange" JSONB NOT NULL,
+    "growthRate" DOUBLE PRECISION NOT NULL,
+    "demandLevel" "DemandLevel" NOT NULL,
+    "topSkills" TEXT[],
+    "marketOutlook" "MarketOutlook" NOT NULL,
+    "marketTrends" TEXT[],
+    "recommendations" TEXT[],
+    "lastUpdated" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    "nextUpdate" TIMESTAMP(3) NOT NULL,
+
+    CONSTRAINT "IndustryInsights_pkey" PRIMARY KEY ("id")
+);
+
+-- CreateIndex
+CREATE UNIQUE INDEX "User_email_key" ON "User"("email");
+
+-- CreateIndex
+CREATE INDEX "Assessment_userId_idx" ON "Assessment"("userId");
+
+-- CreateIndex
+CREATE INDEX "Resume_userId_idx" ON "Resume"("userId");
+
+-- CreateIndex
+CREATE INDEX "CoverLetter_userId_idx" ON "CoverLetter"("userId");
+
+-- CreateIndex
+CREATE UNIQUE INDEX "IndustryInsights_industry_key" ON "IndustryInsights"("industry");
+
+-- AddForeignKey
+ALTER TABLE "User" ADD CONSTRAINT "User_industryId_fkey" FOREIGN KEY ("industryId") REFERENCES "IndustryInsights"("id") ON DELETE SET NULL ON UPDATE CASCADE;
+
+-- AddForeignKey
+ALTER TABLE "Assessment" ADD CONSTRAINT "Assessment_userId_fkey" FOREIGN KEY ("userId") REFERENCES "User"("id") ON DELETE RESTRICT ON UPDATE CASCADE;
+
+-- AddForeignKey
+ALTER TABLE "Resume" ADD CONSTRAINT "Resume_userId_fkey" FOREIGN KEY ("userId") REFERENCES "User"("id") ON DELETE RESTRICT ON UPDATE CASCADE;
+
+-- AddForeignKey
+ALTER TABLE "CoverLetter" ADD CONSTRAINT "CoverLetter_userId_fkey" FOREIGN KEY ("userId") REFERENCES "User"("id") ON DELETE RESTRICT ON UPDATE CASCADE;

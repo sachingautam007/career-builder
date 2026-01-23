@@ -144,12 +144,12 @@ const IndustryInsightsform = ({ industries }) => {
             {errors.bio && <p className="text-red-500 text-sm">{errors.bio.message}</p>}
           </div>
                 
-              <Link href={"/login"} >
+              
            <Button type="submit" className="w-full">
             {/* {updateLoading && <Loader2 className="animate-spin mr-2 h-4 w-4"/>} */}
             Complete Registration
            </Button>
-           </Link>  
+           
         </form>
       </CardContent>
     </Card>
