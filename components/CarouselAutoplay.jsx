@@ -23,7 +23,7 @@ export function CarouselAutoplay() {
 
     load()
   }, [])
-
+//we are gonna change after new image is imported
   const images = [
     "/Image1.jpeg",
     "/Image2.jpeg",
