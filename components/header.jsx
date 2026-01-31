@@ -77,7 +77,7 @@ const Header = async () => {
                 </DropdownMenuItem>
 
                 <DropdownMenuItem asChild>
-                  <Link href={"/mock-test"} className="flex items-center gap-2">
+                  <Link href={"/mockinterview"} className="flex items-center gap-2">
                     <GraduationCap className="h-4 w-4" />
                     Mock Interview
                   </Link>

@@ -1,17 +1,20 @@
 "use server";
 import { db } from "@/lib/prisma";
 import { auth } from "@clerk/nextjs/server";
+// import { revalidatePath } from "next/cache";
+// import { generateAIInsightsForIndustry } from "./dashboard";
+
 export async function updateUser(data) {
     const { userId } = await auth();
     if (!userId) throw new Error("User not authenticated");
 
     const user = await db.user.findUnique({
         where: {
-            ClerkUserId: userId,
+            clerkUserId: userId,
 
         },
     });
-    if (!user) throw new Error("User not found");
+    // if (!user) throw new Error("User not found");
 
     try {
         const result = await db.$transaction(async (tx) => {
@@ -24,13 +27,13 @@ export async function updateUser(data) {
                 industryInsights = await tx.industryInsights.create({
                     data: {
                         industry: data.industry,
-                        salaryRange: [],
+                        salaryRanges: [],
                         growthRate: 0,
                         demandLevel: "MEDIUM",
                         topSkills: [],
-                        marketOutlook: "Neutral",
-                        marketTrends: [],
-                        recommendations: [],
+                        marketOutlook: "STABLE",
+                        keyTrends: [],
+                        recommendedSkills: [],
                         nextUpdate: new Date(Date.now() + 7 * 24 * 60 * 60 * 1000), //1 week from now
 
                     },
@@ -43,9 +46,6 @@ export async function updateUser(data) {
                     experience: data.experience,
                     bio: data.bio,
                     skills: data.skills,
-                    industryInsights: {
-                        // connect: { id: industryInsights.id },
-                    },
                 },
             });
             return { updatedUser, industryInsights };
@@ -54,7 +54,7 @@ export async function updateUser(data) {
             timeout: 8000,
         });
 
-        return result.user;
+        return { success: true, ...result };
     } catch (error) {
         console.error("industry Update failed: ", error.message);
         throw new Error("failed to update industry");
@@ -67,7 +67,7 @@ export async function getUserIndustryInsightsStatus() {
     if (!userId) throw new Error("User not authenticated");
 
     const user = await db.user.findUnique({
-        where: { ClerkUserId: userId,
+        where: { clerkUserId: userId,
 
          },
     });
@@ -75,7 +75,7 @@ if (!user) throw new Error("User not found");
 
 try {
     const user = await db.user.findUnique({
-        where: { ClerkUserId: userId,
+        where: { clerkUserId: userId,
 
          },
          select : {
@@ -87,7 +87,7 @@ try {
     };
     
 } catch (error) {
-    console.error("Error fetching user industry insights status: ", error.message);
+    console.error("Error fetching user industry insights status: ", error);
     throw new Error("Failed to fetch user industry insights status");
     
 }

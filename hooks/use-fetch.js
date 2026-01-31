@@ -1,28 +1,25 @@
-// const { useState } = require("react");
-// const { set } = require("zod");
-// import { toast } from "sonner";
+import { useState } from "react";
+import { toast } from "sonner";
 
-// const useFetch = (cb) => {
-//     const [data, setData]=useState(undefined);
-//     const [loading, setLoading]=useState(null);
-//     const [error, setError]=useState(null);
+export default function useFetch(cb) {
+    const [data, setData]=useState(undefined);
+    const [loading, setLoading]=useState(null);
+    const [error, setError]=useState(null);
 
-//     const fn =async ()=>{
-//         setLoading(true);
-//         setError(null);
-//         try {
-//             const response = await cb(...arguments);
-//             setData(response);
-//             setError(null);
-//         } catch (err) {
-//             setError(err);
-//             toast.error(err.message || "Something went wrong");
-//         } finally {
-//             setLoading(false);
-//         }
-//     };
+    const fn =async (...args)=>{
+        setLoading(true);
+        setError(null);
+        try {
+            const response = await cb(...args);
+            setData(response);
+            setError(null);
+        } catch (err) {
+            setError(err);
+            toast.error(err.message);
+        } finally {
+            setLoading(false);
+        }
+    };
 
-//     return { data, loading, error, fn ,setData};
-//  };
-
-//  export default useFetch;
+    return { data, loading, error, fn ,setData};
+ };

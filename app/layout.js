@@ -5,6 +5,7 @@ import { ClerkProvider } from '@clerk/nextjs'
 
 import { dark } from "@clerk/themes";
 import Header from "@/components/header";
+import { Toaster } from "sonner";
 
 
 const geistSans = Geist({
@@ -46,6 +47,7 @@ export default function RootLayout({ children }) {
               <Header />
 
               <main className="min-h-screen">{children}</main>
+              <Toaster richColors/>
               {/* footer show copyright */}
               <footer className="bg-muted/48 py-10 ">
                 <div className="container mx-auto px-4 text-center text-gray-400">
