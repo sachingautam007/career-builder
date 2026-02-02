@@ -145,9 +145,9 @@ const DashboardView = ({ insights }) => {
                                         }
                                         return null;
                                     }} />
-                                <Bar dataKey="min" fill="#8884d8" activeBar={{ fill: 'pink', stroke: 'blue' }} radius={[10, 10, 0, 0]} name="Min Salary (K)" />
-                                <Bar dataKey="median" fill="#ffc658" activeBar={{ fill: 'lightgreen', stroke: 'darkgreen' }} radius={[10, 10, 0, 0]} name="Median Salary (K)" />
-                                <Bar dataKey="max" fill="#82ca9d" activeBar={{ fill: 'gold', stroke: 'purple' }} radius={[10, 10, 0, 0]} name="Max Salary (K)" />
+                                <Bar dataKey="min" fill="#8884d8" activeBar={{ fill: 'pink', stroke: 'blue' }} radius={[10, 10, 0, 0]} name="Minimum Salary (K)" />
+                                <Bar dataKey="median" fill="#ffc658" activeBar={{ fill: 'lightgreen', stroke: 'darkgreen' }} radius={[10, 10, 0, 0]} name="Medium Salary (K)" />
+                                <Bar dataKey="max" fill="#82ca9d" activeBar={{ fill: 'gold', stroke: 'purple' }} radius={[10, 10, 0, 0]} name="Maximum Salary (K)" />
                             </BarChart>
                         </ResponsiveContainer>
                     </div>

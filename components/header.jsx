@@ -1,4 +1,4 @@
-
+"use clients";
 import { ModeToggle } from "@/components/mode-toggle"
 import Link from "next/link";
 import Image from "next/image";
