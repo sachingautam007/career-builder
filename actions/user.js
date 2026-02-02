@@ -1,7 +1,7 @@
 "use server";
 import { db } from "@/lib/prisma";
 import { auth } from "@clerk/nextjs/server";
-// import { revalidatePath } from "next/cache";
+import { revalidatePath } from "next/cache";
 import { generateAIInsightsForIndustry } from "./dashboard";
 
 
@@ -48,10 +48,10 @@ export async function updateUser(data) {
             return { updatedUser, industryInsights };
 
         }, {
-            timeout: 10000,
+            timeout: 20000,
         });
-        // revalidatePath("/");
-         return result.User;
+        revalidatePath("/");
+         return result.updatedUser;
     } catch (error) {
         console.error("industry Update failed: ", error.message);
         throw new Error("failed to update industry");
