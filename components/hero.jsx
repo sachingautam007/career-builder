@@ -1,3 +1,4 @@
+"use client";
 import { CarouselAutoplay } from "@/components/CarouselAutoplay";
 import { Button } from "./ui/button";
 import Link from "next/link";

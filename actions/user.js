@@ -37,7 +37,9 @@ export async function updateUser(data) {
                 });
             }
             const updatedUser = await tx.user.update({
-                where: { id: user.id },
+                where: { 
+                    id: user.id,
+                 },
                 data: {
                     industry: data.industry,
                     experience: data.experience,
@@ -48,10 +50,10 @@ export async function updateUser(data) {
             return { updatedUser, industryInsights };
 
         }, {
-            timeout: 20000,
+            timeout: 10000,
         });
         revalidatePath("/");
-         return result.updatedUser;
+         return result.user;
     } catch (error) {
         console.error("industry Update failed: ", error.message);
         throw new Error("failed to update industry");
