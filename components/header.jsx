@@ -1,4 +1,4 @@
-"use clients";
+import React from "react";
 import { ModeToggle } from "@/components/mode-toggle"
 import Link from "next/link";
 import Image from "next/image";
@@ -10,6 +10,9 @@ import { DropdownMenuItem } from "@/components/ui/dropdown-menu";
 import { DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { SignInButton, SignUpButton, SignedIn, SignedOut, UserButton, } from '@clerk/nextjs'
 import { checkUser } from "@/lib/checkUser";
+import dynamic from "next/dynamic"
+
+
 
 
 const Header = async () => {
