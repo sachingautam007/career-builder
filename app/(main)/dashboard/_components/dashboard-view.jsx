@@ -163,14 +163,14 @@ const DashboardView = ({ insights }) => {
                         </CardDescription>
                     </CardHeader>
                     <CardContent>
-                       <ul className="space-y-4">
-                        {insights.keyTrends.map((trend, index) => (
-                            <li key={index} className="flex items-start space-x-3">
-                                <div className="w-2 h-2 bg-cyan-500 rounded-full mt-2"></div>    
-                                <p>{trend}</p>
-                            </li>
-                        ))}
-                       </ul>
+                        <ul className="space-y-4">
+                            {insights.keyTrends.map((trend, index) => (
+                                <li key={index} className="flex items-start space-x-3">
+                                    <div className="w-2 h-2 bg-cyan-500 rounded-full mt-2"></div>
+                                    <p>{trend}</p>
+                                </li>
+                            ))}
+                        </ul>
                     </CardContent>
                 </Card>
 
@@ -182,13 +182,13 @@ const DashboardView = ({ insights }) => {
                         </CardDescription>
                     </CardHeader>
                     <CardContent>
-                          <div className="flex flex-wrap gap-2">
-                        {insights.recommendedSkills.map((skill) => (
-                            <Badge key={skill} variant="outline">
-                                {skill}
-                            </Badge>
-                        ))}
-                       </div>
+                        <div className="flex flex-wrap gap-2">
+                            {insights.recommendedSkills.map((skill) => (
+                                <Badge key={skill} variant="outline">
+                                    {skill}
+                                </Badge>
+                            ))}
+                        </div>
                     </CardContent>
                 </Card>
 
