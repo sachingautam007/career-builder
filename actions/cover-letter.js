@@ -103,6 +103,25 @@ export async function getCoverLetter(id) {
   });
 }
 
+export async function updateCoverLetter(id, text) {
+  const { userId } = await auth();
+  if (!userId) throw new Error("Unauthorized");
+
+  const user = await db.user.findUnique({
+    where: { clerkUserId: userId },
+  });
+
+  if (!user) throw new Error("User not found");
+
+  return await db.coverLetter.update({
+    where: { 
+      id,
+      userId: user.id,
+    },
+    data: { content: text },
+  });
+}
+
 export async function deleteCoverLetter(id) {
   const { userId } = await auth();
   if (!userId) throw new Error("Unauthorized");

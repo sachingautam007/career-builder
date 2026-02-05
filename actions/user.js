@@ -50,7 +50,7 @@ export async function updateUser(data) {
             return { updatedUser, industryInsights };
 
         }, {
-            timeout: 10000,
+            timeout: 15000,
         });
         revalidatePath("/");
          return result.user;
