@@ -10,14 +10,14 @@ export default function NewCoverLetterPage() {
         <Link href="/cover-letter">
           <Button variant="link" className="gap-2 pl-0">
             <ArrowLeft className="h-4 w-4" />
-            Back to Cover Letters
+            Back to Application Letters
           </Button>
         </Link>
 
         <div className="pb-6">
-          <h1 className="text-6xl font-bold gradient-title">Create Cover Letters</h1>
+          <h1 className="text-6xl font-bold gradient-title">Create Application Letters</h1>
           <p className="text-muted-foreground">
-            Generate industry specific cover letter for your job application
+            Generate industry specific application letter for your job application
           </p>
         </div>
       </div>

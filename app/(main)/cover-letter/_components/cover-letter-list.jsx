@@ -42,9 +42,9 @@ export default function CoverLetterList({ coverLetters }) {
     return (
       <Card>
         <CardHeader>
-          <CardTitle>No Cover Letters Yet</CardTitle>
+          <CardTitle>No Application Letters Yet</CardTitle>
           <CardDescription>
-            Create your first cover letter to get started
+            Create your first application letter to get started
           </CardDescription>
         </CardHeader>
       </Card>
@@ -81,7 +81,7 @@ export default function CoverLetterList({ coverLetters }) {
                   </AlertDialogTrigger>
                   <AlertDialogContent>
                     <AlertDialogHeader>
-                      <AlertDialogTitle>Delete Cover Letter?</AlertDialogTitle>
+                      <AlertDialogTitle>Delete Application Letter?</AlertDialogTitle>
                       <AlertDialogDescription>
                         This action cannot be undone. This will permanently
                         delete your cover letter for {letter.jobTitle} at{" "}

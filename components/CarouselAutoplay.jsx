@@ -25,9 +25,9 @@ export function CarouselAutoplay() {
   }, [])
 //we are gonna change after new image is imported
   const images = [
-    "/Image1.jpeg",
-    "/Image2.jpeg",
-    "/Image3.jpeg",
+    "/picture1.jpeg",
+    "/picture2.jpeg",
+    "/picture3.jpeg",
   ]
 
   if (!Swiper || !SwiperSlide || !modules) {

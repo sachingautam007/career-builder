@@ -2,12 +2,12 @@ export const faqs = [
   {
     question: "What makes NextStep.ai unique as a career development tool?",
     answer:
-      "NextStep.ai combines AI-powered career tools with industry-specific insights to help you grow your career. Our platform offers four main features: an intelligent ATS resume tester, Ai-powered career guidance to get industry-insights, a cover letter generator, and an adaptive interview preparation system. Each tool is tailored to your industry and skills, providing personalized guidance for your professional journey.",
+      "NextStep.ai combines AI-powered career tools with industry-specific insights to help you grow your career. Our platform offers four main features: an intelligent ATS resume tester, Ai-powered career guidance to get industry-insights, a application letter generator, and an adaptive interview preparation system. Each tool is tailored to your industry and skills, providing personalized guidance for your professional journey.",
   },
   {
     question: "How does NextStep.ai create tailored content?",
     answer:
-      "NextStep.ai learns about your industry, experience, and skills during onboarding. It then uses this information to generate customized resumes, cover letters, and interview questions. The content is specifically aligned with your professional background and industry standards, making it highly relevant and effective.",
+      "NextStep.ai learns about your industry, experience, and skills during onboarding. It then uses this information to generate customized resumes, application letters, and interview questions. The content is specifically aligned with your professional background and industry standards, making it highly relevant and effective.",
   },
   {
     question: "How accurate and up-to-date are NextStep.ai's industry insights?",
@@ -27,6 +27,6 @@ export const faqs = [
   {
     question: "Can I edit the AI-generated content?",
     answer:
-      "Yes! While NextStep.ai generates high-quality initial content, you have full control to edit and customize all generated words from ATS tester, cover letters, and other content. Our markdown editor makes it easy to refine the content to perfectly match your needs.",
+      "Yes! While NextStep.ai generates high-quality initial content, you have full control to edit and customize all generated words from ATS tester, application letters, and other content. Our markdown editor makes it easy to refine the content to perfectly match your needs.",
   },
 ];

@@ -27,7 +27,9 @@ const HeroSection = () => {
       </Link>
     </div>
 
-    <div>
+  </div>
+
+    <div className="mt-14 flex justify-center">
       <CarouselAutoplay
         width={1280}
         height={960}
@@ -35,8 +37,6 @@ const HeroSection = () => {
         priority
       />
     </div>
-
-  </div>
 </section>
 
   );

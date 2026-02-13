@@ -5,7 +5,7 @@ import { db } from "@/lib/prisma";
 import { auth } from "@clerk/nextjs/server";
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
-const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY2); //if request is exausted use this Temporary
+const genAI = new GoogleGenerativeAI(process.env.Temporary); //if request is exausted use this Temporary
 const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
 
 const LEVEL_THRESHOLDS = {
